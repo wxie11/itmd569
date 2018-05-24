@@ -52,3 +52,7 @@ function reverseArray(array)
 
 console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+
+//A list
+
+//Deep Comparison
