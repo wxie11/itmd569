@@ -26,7 +26,7 @@ console.log(amountAfterTaxes(amount, fedTax));
 console.log(amountAfterTaxes(amount, fedTax, stateTax));
 console.log(amountAfterTaxes(amount, fedTax, stateTax, localTax));
 
-//Excerise 2
+//Exercise 2
 'use strict';
 
 const purchaseItems = function(essential1, essential2, ...optionals)
@@ -54,3 +54,19 @@ const items = ['cheese', 'milk'];
 purchaseItems('cheese'); //cheese, bread,
 purchaseItems(...items); //cheese, milk,
 purchaseItems(); //milk, bread,
+
+//Exercise 4
+'use strict';
+
+const placeOrder = function(
+  id, amount,
+  shipping = (amount < 20 ? 5 : 10), 
+  date = new Date()) {
+    console.log(' shipping charge for id: ' + id + ' is $' + shipping + ' Date: ' + date.getDate());
+  };
+
+placeOrder(1, 12.10, 3, new Date('05/15/2018'));
+placeOrder(1, 25.20, 10);
+placeOrder(1, 12.05);
+placeOrder(1, 25.30);
+placeOrder(1, 25.20);
